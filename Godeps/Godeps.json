@@ -1,5 +1,5 @@
 {
-	"ImportPath": "cassandragenrest",
+	"ImportPath": "https://github.com/stevef1uk/cassandragenrest.git",
 	"GoVersion": "go1.9",
 	"Deps": []
 }
