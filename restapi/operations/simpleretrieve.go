@@ -36,8 +36,8 @@ import (
 
   func SetUp() {
       var err error
-      fmt.Println("Connecting to Cassandra on ", os.Getenv("REST1_SERVICE_HOST"))
-      cluster := gocql.NewCluster(os.Getenv("REST1_SERVICE_HOST"))
+      fmt.Println("Connecting to Cassandra on ", os.Getenv("CASSANDRA_SERVICE_HOST"))
+      cluster := gocql.NewCluster(os.Getenv("CASSANDRA_SERVICE_HOST"))
       cluster.Keyspace = "demo"
       cluster.Consistency = gocql.One
       session, err = cluster.CreateSession()
