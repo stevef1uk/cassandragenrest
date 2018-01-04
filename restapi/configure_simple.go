@@ -11,7 +11,8 @@ import (
 	middleware "github.com/go-openapi/runtime/middleware"
 	graceful "github.com/tylerb/graceful"
 
-	"cassandragenrest/restapi/operations"
+	//"cassandragenrest/restapi/operations"
+	"github.com/stevef1uk/cassandragenrest/restapi/operations"
 )
 
 // This file is safe to edit. Once it exists it will not be overwritten

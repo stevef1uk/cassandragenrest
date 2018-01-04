@@ -2,7 +2,8 @@ package operations
 
 import (
     middleware "github.com/go-openapi/runtime/middleware"
-    "cassandragenrest/models"
+    //"cassandragenrest/models"
+    "github.com/stevef1uk/cassandragenrest/models"
     "github.com/gocql/gocql"
     "fmt"
     //"log"
@@ -39,6 +40,7 @@ import (
       cluster.Consistency = gocql.One
       session, _ = cluster.CreateSession()
   }
+
   func Stop() {
     fmt.Println("Stopping Cassandra")
     session.Close()
