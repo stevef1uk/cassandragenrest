@@ -6,6 +6,7 @@ import (
     "github.com/stevef1uk/cassandragenrest/models"
     "github.com/gocql/gocql"
     "fmt"
+    "os"
     //"log"
 )
 
@@ -35,7 +36,7 @@ import (
 
   func SetUp() {
       fmt.Println("Connecting to Cassandra")
-      cluster := gocql.NewCluster("127.0.0.1")
+      cluster := gocql.NewCluster(os.Getenv("REST1_SERVICE_HOST"))
       cluster.Keyspace = "demo"
       cluster.Consistency = gocql.One
       session, _ = cluster.CreateSession()
