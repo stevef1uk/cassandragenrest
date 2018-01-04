@@ -20,7 +20,8 @@ import (
 	flags "github.com/jessevdk/go-flags"
 	graceful "github.com/tylerb/graceful"
 
-	"cassandragenrest/restapi/operations"
+	//"cassandragenrest/restapi/operations"
+	"github.com/stevef1uk/cassandragenrest/restapi/operations"
 )
 
 const (
