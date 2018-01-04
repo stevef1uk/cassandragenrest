@@ -10,7 +10,8 @@ import (
 
 	"github.com/go-openapi/runtime"
 
-	"cassandragenrest/models"
+	//"cassandragenrest/models"
+	"github.com/stevef1uk/cassandragenrest/models"
 )
 
 // GetAccountsOKCode is the HTTP code returned for type GetAccountsOK
