@@ -1,0 +1,5 @@
+{
+	"ImportPath": "cassandragenrest",
+	"GoVersion": "go1.9",
+	"Deps": []
+}
