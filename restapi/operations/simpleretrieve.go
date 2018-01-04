@@ -7,7 +7,7 @@ import (
     "github.com/gocql/gocql"
     "fmt"
     "os"
-    //"log"
+    "log"
 )
 
 /** func Search(params GetAccountsParams) middleware.Responder {
@@ -35,11 +35,17 @@ import (
   var session *gocql.Session
 
   func SetUp() {
-      fmt.Println("Connecting to Cassandra")
+      var err error
+      fmt.Println("Connecting to Cassandra on ", os.Getenv("REST1_SERVICE_HOST"))
       cluster := gocql.NewCluster(os.Getenv("REST1_SERVICE_HOST"))
       cluster.Keyspace = "demo"
       cluster.Consistency = gocql.One
-      session, _ = cluster.CreateSession()
+      session, err = cluster.CreateSession()
+      if ( err != nil ) {
+          log.Fatal("Connection to Cannandra failed", err)
+      } else {
+          fmt.Println("Connection to Cannandra established")
+      }
   }
 
   func Stop() {
