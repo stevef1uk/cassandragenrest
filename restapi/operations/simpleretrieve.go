@@ -47,8 +47,8 @@ import (
     session.Close()
   }
   func Search(params GetAccountsParams) middleware.Responder {
-      var id int;
-      var name string
+      var id int = 0
+      var name string = ""
 
       fmt.Println("Id = ", params.ID)
       fmt.Println("Name = ", params.Name)
