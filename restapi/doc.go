@@ -7,7 +7,7 @@ A simple API to learn how to write OpenAPI Specification
 
     Schemes:
       http
-    Host: localhost:53379
+    Host: test-test1.192.168.64.34.nip.io
     BasePath: /v1
     Version: 1.0.0
 

@@ -10,7 +10,6 @@ import (
 
 	"github.com/go-openapi/runtime"
 
-	//"cassandragenrest/models"
 	"github.com/stevef1uk/cassandragenrest/models"
 )
 
