@@ -7,7 +7,7 @@ A simple API to learn how to write OpenAPI Specification
 
     Schemes:
       http
-    Host: 0.0.0.0:8080
+    Host: localhost
     BasePath: /v1
     Version: 1.0.0
 

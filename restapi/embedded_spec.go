@@ -23,7 +23,6 @@ func init() {
     "title": "Simple API",
     "version": "1.0.0"
   },
-  "host": "0.0.0.0:8080",
   "basePath": "/v1",
   "paths": {
     "/accounts": {
