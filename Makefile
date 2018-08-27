@@ -15,7 +15,19 @@ all: build
 
 check: fmt build test
 
-build:
+deps:
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/go-openapi/runtime
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/tylerb/graceful
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/jessevdk/go-flags
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/docker/go-units
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/go-openapi/analysis
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/go-openapi/loads
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/go-openapi/validate
+	CGO_ENABLED=$(CGO_ENABLED) $(GO) get -u github.com/gocql/gocql
+
+
+
+build: deps
 	CGO_ENABLED=$(CGO_ENABLED) $(GO) build -ldflags $(BUILDFLAGS) -o bin/$(NAME) $(MAIN_GO)
 
 test: 
