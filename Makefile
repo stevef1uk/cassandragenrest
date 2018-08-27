@@ -2,7 +2,7 @@ SHELL := /bin/bash
 GO := GO15VENDOREXPERIMENT=1 go
 NAME := src
 OS := $(shell uname)
-MAIN_GO := main.go
+MAIN_GO := cmd/simple-server/main.go
 ROOT_PACKAGE := $(GIT_PROVIDER)/stevef1uk/$(NAME)
 GO_VERSION := $(shell $(GO) version | sed -e 's/^[^0-9.]*\([0-9.]*\).*/\1/')
 PACKAGE_DIRS := $(shell $(GO) list ./... | grep -v /vendor/)
